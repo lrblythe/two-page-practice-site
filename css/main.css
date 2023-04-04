@@ -1,0 +1,922 @@
+:root {
+  --color-primary: #4056a1; 
+  --color-primary-light: #c5cbe3; 
+  --color-secondary: #d79922; 
+  --color-secondary-light: #efe2ba;
+  --color-accent: #f13c20; 
+  --color-background: #f2f1eb;
+}
+
+/* Box sizing rules */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+    margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    line-height: 1.5;
+    font-family: 'Lato', Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    margin: 0;
+    /* background-color: #def4e9;  */
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration-skip-ink: auto;
+    color: var(--color-secondary);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-secondary-light) ;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+svg {
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}
+
+
+
+/* ---------- Start of Two-Page Website Project ---------- */
+
+
+html {
+  background-color: var(--color-background);
+}
+
+/* --- Type Scales --- */
+h1 {
+    font-size: 2.566rem;
+    font-weight: 900;
+  
+}
+
+h2 {
+    font-size: 1.602rem;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 1.424rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.266rem;
+    font-weight: 700;
+    margin-bottom: 0rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-weight: 500; 
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem; 
+}
+
+/* --- Type Scale Media Queries --- */
+
+
+@media only screen and (min-width: 45em) {
+
+    h1 {
+      font-size: 4.3rem;
+    }
+    
+    h2 {
+      font-size: 2.074rem;
+    }
+    
+    h3 {
+      font-size: 1.728rem;
+    }
+    
+    h4 {
+      font-size: 1.44rem;
+    }
+    
+    h5 {
+      font-size: 1.2rem;
+    }
+  
+    }
+    
+  
+  
+    @media only screen and (min-width: 60em) {
+    
+      h1 {
+        font-size: 4.768rem;
+      }
+      
+      h2 {
+        font-size: 2.441rem;
+      }
+      
+      h3 {
+        font-size: 1.953rem;
+      }
+      
+      h4 {
+        font-size: 1.563rem;
+      }
+      
+      h5 {
+        font-size: 1.25rem;
+      }
+  
+    }
+
+
+
+/* --- Primary Container --- */
+
+.container {
+    width: min(60em, 100%);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    /* margin-top: 3rem;
+    margin-bottom: 3rem; */
+
+}
+
+
+
+
+/* --- Header Styles ---  */
+
+.header {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-top: .25rem solid var(--color-secondary);
+  }
+  
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem; 
+    padding: 0;
+    
+  }
+  
+  .header a {
+    color: #fff;
+    text-decoration: none;
+  
+  }
+  
+  .header a:hover, 
+  .header a:focus-visible {
+    color: var(--color-secondary);
+  }
+  
+  .header .logo {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header .logo__img {
+    width: 9rem;
+  }
+  
+
+  .header ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .header li a {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
+    font-size: 1rem;
+  
+  }
+  
+  .header .nav__menu a:hover {
+    color: #fff;
+    background-color: var(--color-secondary);
+  }
+  
+
+/* - - - - - - - - - - Nav Toggle - - - - - - - - - - */
+
+.nav-toggle {
+  width: 2.5rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-toggle .tog {
+  width: 100%;
+  height: .25rem;
+  background-color: #fff;
+  position: relative;
+  transition:
+    top .2s,
+    bottom .2s,
+    opacity .2s,
+    transform .2s;
+}
+.tog.top {
+  top: 0;
+}
+
+.tog.bottom {
+  bottom: 0;
+}
+
+.open .top {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.open .middle {
+  opacity: 0;
+}
+
+.open .bottom {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.header nav.open {
+  right: 0;
+}
+
+.header nav {
+  position: fixed;
+  top: 0;
+  right: -66.6666%;
+  width: 66.6666vw;
+  height: 100vh;
+  opacity: 90%;
+  /* ---------- prof comment ----------
+  
+  You should not be using `px`!
+  
+  ---------- end prof comment ---------- */
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, .15);
+  background-color: var(--color-primary-light);
+  transition:
+    right .2s,
+    top .2s;
+}
+
+.header .container {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5rem 0;
+}
+
+/* ---------- prof comment ----------
+
+You should be using min-width media queries only!
+We work mobile first in this program.
+
+---------- end prof comment ---------- */
+@media only screen and (max-width: 45em) {
+  .header nav {
+    padding-top: 3.5rem;
+  }
+}
+
+
+@media only screen and (min-width: 45em) {
+
+  .nav-toggle {
+    display: none;
+  }
+
+
+
+.click-to-close {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0008;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    opacity .2s;
+}
+
+.click-to-close.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header nav {
+  position: static;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  z-index: auto;
+  background-color: transparent;
+}
+
+.header nav ul {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+}
+
+.header nav li:not(:last-child) {
+  margin-bottom: 0;
+  margin-right: 2rem;
+}
+
+.header nav a {
+  display: block;
+  font-size: 1rem;
+}
+
+}
+
+/* - - - - - - - - - - End of Nav Toggle - - - - - - - - - - */
+
+
+/* --- Banner Styles --- */
+.banner {
+  background-image: linear-gradient(to bottom, #0009, #0009),
+  url('../images/hero-banner.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.banner .container {
+  min-height: 65vh;
+  /* vh means "view height", the height of the viewer in the browser */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem; 
+}
+
+.banner__content {
+  width: min(35em, 100%);
+}
+
+.banner__content h2 {
+  margin-bottom: 0;
+}
+
+.banner__title {
+  line-height: 1.3;
+  color: var(--color-secondary);
+}
+
+.banner__text {
+  font-size: 1.150rem; 
+  color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: .55em 1.5em .5em;
+    background-color: var(--color-secondary);
+    border: 0.125rem solid var(--color-secondary);
+    color: #000;
+    border-radius: .25em;
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    -ms-border-radius: .25em;
+    -o-border-radius: .25em;
+
+    /* link necessary styles */
+    text-decoration: none;
+
+    /* button necessary styles */
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background-color: var(--color-secondary-light);
+    border-color: var(--color-secondary-light);
+    color: #000;
+}
+
+
+.banner a:hover,
+.banner a:focus {
+  color: #000;
+}
+
+
+
+/* --- Blog Banner --- */
+.banner--blog {
+  background-image: linear-gradient(to bottom, rgba(27, 26, 26, 0.6), rgba(122, 122, 122, 0.6)),
+  url('../images/blog-image-adventurers.jpg');
+  background-position: bottom left;
+  background-size: cover;
+  display: flex;
+}
+
+.banner .blog--container {
+  min-height: 80vh;
+}
+
+.author-pic {
+  display: flex;
+}
+
+
+/* --- Blog Tags --- */
+
+.blog-tags h2 {
+  margin: 0;
+}
+
+.blog-tags {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  margin: 1rem 0 1rem;
+}
+
+.tag {
+  text-decoration: none;
+  padding: .2rem;
+  border: var(--color-primary) dotted .1rem;
+  box-shadow: inset rgb(165, 157, 157) 0 0 .3rem 0;
+}
+
+
+/* --- Blog Text --- */
+
+.blog-post {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.blog--container {
+  width: min(60em, 100%);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    
+}
+.article-content img {
+  padding-bottom: 1.5rem;
+}
+
+.callout {
+  background-color: var(--color-secondary-light);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.3rem;
+  border: #000 dotted 0.2rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.author--callout {
+  padding: 1.5rem;
+  border-radius: .3rem;
+  background: var(--color-accent);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  opacity: 1;
+  -webkit-border-radius: .3rem;
+  -moz-border-radius: .3rem;
+  -ms-border-radius: .3rem;
+  -o-border-radius: .3rem;
+}
+
+.author--callout img {
+  border-radius: 50%;
+  border:  var(--color-background) dashed .2rem; 
+  width: 5rem;  
+  margin-bottom: .5rem;
+  
+}
+
+
+/* --- Card Grid System --- */
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.xs-1 {
+  grid-column: span 12;
+}
+
+
+
+/* --- Card Styles ---  */
+
+
+.three-cards .container--grid {
+  margin-top: 3rem ;
+  margin-bottom: 3rem;
+}
+  .card img {
+    width: 100%;
+    height: 25vh;
+    background-color: var(--color-accent);
+  }
+  
+.card-group {
+    display: grid;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-group .col {
+  display: flex;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    align-items: flex-start; 
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 .25rem .5rem #0002;
+    text-decoration: none;
+    overflow: hidden;
+    
+}
+
+.card:hover,
+.card:focus {
+  transform: translateY(-.5rem);
+  box-shadow: 0 .5rem .5rem var(--color-primary-light);
+  -webkit-transform: translateY(-.5rem);
+  -moz-transform: translateY(-.5rem);
+  -ms-transform: translateY(-.5rem);
+  -o-transform: translateY(-.5rem);
+}
+
+
+a:hover,
+a:focus {
+  color: #000; 
+}
+/* this offsets css reset values */
+
+
+.card__title {
+    /* color: var(--color-primary-light); */
+    padding: 1rem 1rem 0;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+
+.card p {
+  padding: 0 1rem;
+  flex-grow: 1;
+  font-size: 1.125rem;
+  
+}
+
+
+
+/* --- Card Media Queries --- */
+
+@media only screen and (min-width: 45em) {
+
+  .m-1 {
+    grid-column: span 12;
+  }
+
+  .m-1-2 {
+    grid-column: span 6;
+  }
+
+  .m-1-3 {
+    grid-column: span 4;
+  }
+
+  .m-2-3 {
+    grid-column: span 8;
+  }
+
+  h2 {
+    font-size: 1.728rem;
+  }
+
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .l-1 {
+    grid-column: span 12;
+  }
+
+  .l-1-2 {
+    grid-column: span 6;
+  }
+
+  .l-1-3 {
+    grid-column: span 4;
+  }
+
+  .l-1-4 {
+    grid-column: span 3;
+  }
+
+  h2 {
+    font-size: 2.074rem;
+  }
+
+
+}
+
+
+/* --- Split Image Content Section --- */
+
+.image-content {
+  background-color: var(--color-primary-light);
+}
+
+.image-content .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+.image-content__image{
+  aspect-ratio: 1 / 1;
+  /* use this if your image isn't a perfect square and you want it to be a perfect square */
+  display: flex;
+}
+
+.image-content__image  img {
+  object-fit: cover;
+}
+
+.image-content__title{
+  font-size: 1.756rem;
+  line-height: 1.3;
+}
+
+@media only screen and (min-width: 45em) {
+  
+  .image-content .container{
+      grid-template-columns: 1fr 2fr;
+  }
+
+  .image-content__title{
+      font-size: 2.069rem;
+      
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  
+  .image-content .container{
+      grid-template-columns: 1fr 1fr;
+  }
+
+  .image-content__title{
+      font-size: 2.444rem;
+  }
+}
+
+/* --- Recent Blog Posts Styles */
+
+.recent-blog-posts {
+  background-color: var(--color-secondary);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+/* --- Footer Styles --- */
+
+.footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-bottom: .5rem solid var(--color-secondary);
+}
+
+.footer .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover, 
+.footer a:focus-visible {
+    color: var(--color-secondary);
+}
+
+.footer .logo {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+}
+
+.footer .logo__img {
+    width: 9rem;
+}
+
+.footer .logo__text {
+    font-size: 1.525rem;
+    font-weight: bold;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0 1.5rem 0 0;
+    border-left: .125rem solid var(--color-secondary);
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem; 
+}
+
+.footer li a {
+    font-size: 1rem;
+}
+
+.small {
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+    gap: .5rem;
+}
+
+
+/* --- Header and Footer Media Queries --- */
+
+
+
+@media only screen and (min-width: 45em) {
+  .header .container {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .header .logo__img {
+    padding-top: 0;
+}
+}
+
+  @media only screen and (min-width: 60em) {
+
+    .container {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    
+    .header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+  
+    .header .logo__img {
+        padding-top: 0;
+    }
+
+    .header ul {
+        flex-direction: row;
+    }
+    
+    .header li a {
+      padding: 1rem 1rem; 
+    }
+    
+    .header .nav__menu {
+        align-items: flex-end;
+    }
+
+    .footer .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer .logo {
+        flex: 2 0; 
+    }
+  
+    }
+
